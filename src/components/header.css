@@ -1,0 +1,33 @@
+.theme-dark {
+    background: var(--dark-mode-elements);
+    color: var(--dark-mode-text-light-mode-elements);
+    transition: all 1s ease;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.theme-ligth { 
+    color: var(--light-mode-text);
+    background: var(--light-mode-background);
+    transition: all 1s ease;
+}
+.header h1 {
+    font-size: x-large;
+    margin-left: 20px;
+}
+
+.container-mode{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: x-large;
+    margin-right: 50px;
+    cursor: pointer;
+}
+ .container-mode svg{
+    font-size: large;
+}
+

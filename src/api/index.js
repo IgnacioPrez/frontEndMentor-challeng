@@ -1,0 +1,1 @@
+export const BaseURl = 'https://restcountries.com/v2/';

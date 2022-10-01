@@ -1,0 +1,130 @@
+.input-container{
+    display: flex;
+    justify-content: space-between;
+    height: 5em;
+    align-items: center;
+}
+
+.input-container select{
+    background: inherit;
+}
+
+.input-search-container {
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-radius: 5px;
+    padding: 10px;
+    width: 350px;
+}
+
+.input-search-container  input{
+    width: 100%;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    background: inherit;
+}
+
+
+.input-search-container  input::placeholder{
+    color: var(--light-mode-input);
+}
+.input-search-container svg{
+    color: var(--light-mode-input);
+    font-size: x-large;
+}
+
+.select-country-container select{
+    margin-right: 50px;
+    border: none;
+    outline: none;
+    width: 100%;
+    border-radius: 5px;
+    color: inherit;
+    appearance: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+    position: relative;
+    padding:12px;
+
+}
+
+.select-country-container select::-ms-expand {
+    display: none;
+}
+
+.select-country-container {
+    position: relative;
+    margin-right: 50px;
+
+}
+.select-country-container i {
+    position: absolute;
+	right: 13px;
+	top: calc(50% - 5px);
+	width: 7px;
+	height: 7px;
+	display: block;
+	border-left:1.5px solid #fff;
+	border-bottom:1.5px solid #fff;
+	transform: rotate(-45deg); /* Giramos el cuadrado */
+	transition: all 0.25s ease;
+}
+
+.flags-container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+    width: 95%;
+    margin: auto;
+    margin-top: 30px;
+    gap: 50px;
+}
+.card {
+    width: 280px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.card img{
+    width: 100%;
+    border-radius: 5px 5px 0px 0px;
+
+}
+.card p {
+    font-weight:600;
+    margin-left: 10px;
+}
+.card p:nth-child(2){
+    font-size: large;
+    font-weight: bold;
+    width: 70%;
+    text-align: center;
+    margin: 15px auto;
+}
+
+.ligth-input{
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.theme-ligth{
+    background: var(--light-mode-background);
+}
+.ligth-elemets{
+    background: var(--light-mode-background);
+    color: var( --light-mode-text);
+    border-radius: 5px;
+
+}
+.dark-elements{
+    background: var(--dark-mode-elements);
+    color: var(--dark-mode-text-light-mode-elements);
+    border-radius: 5px;
+
+}
+.theme-dark{
+    background: var(--background-dark);
+}
