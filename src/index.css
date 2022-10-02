@@ -1,3 +1,7 @@
+*{
+  text-decoration: none;
+  list-style-type:none ;
+}
 body {
   margin: 0;
   padding: 0;
@@ -5,13 +9,15 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-family: 'Nunito Sans', sans-serif;
+  background: var(--background-dark);
+
   --background-dark: hsl(207, 26%, 17%);
   --dark-mode-elements: hsl(209, 23%, 22%);
   --light-mode-text:hsl(200, 15%, 8%);
   --light-mode-input:hsl(0, 0%, 52%);
   --light-mode-background: hsl(0, 0%, 98%);
   --dark-mode-text-light-mode-elements: hsl(0, 0%, 100%);
-  background: var(--background-dark);
+
 }
 
 code {

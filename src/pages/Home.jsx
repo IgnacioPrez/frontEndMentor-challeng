@@ -2,11 +2,12 @@ import { useEffect, useState } from "react";
 import "./home.css";
 import { AiOutlineSearch } from "react-icons/ai";
 import { BaseURl } from "../api";
-
+import { Link,Outlet } from "react-router-dom";
 const Home = ({mode}) => {
   const [flags, setFlags] = useState([]);
   const [value, setValue] = useState("");
   const [selectRegion, setSelectRegion] = useState("");
+  const [selected,setSelected] = useState([])
 
   const getFlags = async () => {
     /* Puedo filtrar por nombre lo que quiero, ya que estoy trayendo todos los datos */
@@ -14,7 +15,8 @@ const Home = ({mode}) => {
     fetch(BaseURl+name)
       .then((result) => result.json())
       .then((data) => {
-        setFlags(data); 
+        setFlags(data);
+        setSelected(data[0])
       })
       .catch((error) => console.log(error));
   };
@@ -25,6 +27,7 @@ const Home = ({mode}) => {
       .then((result) => result.json())
       .then((data) => {
         setFlags(data);
+
       })
       .catch((error) => console.log(error));
   };
@@ -40,6 +43,7 @@ const Home = ({mode}) => {
   const country = (e) => {
     setValue(e.target.value);
   };
+
   const filterRegion = (e) => {
     setSelectRegion(e.target.value);
   };
@@ -66,19 +70,20 @@ const Home = ({mode}) => {
           <i></i>
         </div>
       </div>
-      <section className="flags-container">
+      <section className="flags-container"> 
         {flags.map((flag, index) => {
           return (
-            <div key={index} className={!mode? 'card dark-elements ': 'card ligth-elemets '}>
+            <Link to={`/info/${flag.name}`}  key={index} className={!mode? 'card dark-elements ': 'card ligth-elemets '} >
               <img src={flag.flags.svg} alt={flag.name} />
               <p>{flag.name}</p>
               <p>{`Population: ${flag.population}`}</p>
               <p>{`Region: ${flag.region}`}</p>
               <p>{`Capital: ${flag.capital}`}</p>
-            </div>
+            </Link>
           );
         })}
       </section>
+      <Outlet/>
     </main>
   );
 };
