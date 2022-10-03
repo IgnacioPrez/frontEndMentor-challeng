@@ -3,7 +3,7 @@ import { Link, useParams } from "react-router-dom";
 import { BaseURl } from "../api";
 import { BsArrowLeft } from "react-icons/bs";
 import "./info.css";
-
+import './infoQuery.css';
 const InfoCountry = ({mode}) => {
   const { country } = useParams();
   const [info, setInfo] = useState([]);
@@ -47,11 +47,10 @@ const InfoCountry = ({mode}) => {
                 </div>
                 <div className="border-countries">
                   <p><span>Border Countries:</span></p>
-                  <div style={{display: 'flex',gap:'10px'}}>
+                  <div className='border-countries-country'>
                   <p>{inf.borders[0]}</p>
                   <p>{inf.borders[1]}</p>
                   <p>{inf.borders[2]}</p>
-
                   </div>
                 </div>
               </div>

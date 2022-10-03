@@ -1,0 +1,90 @@
+
+/* PHONE */
+@media screen and (min-width:320px) and (max-width:576px) {
+    .input-container {
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: initial;
+        gap: 25px;
+        margin-bottom: 30px;
+        height: 150px;
+    }
+    .input-search-container {
+        margin-left: 4px;
+        gap: 4px;
+        margin-top: 30px;
+        width: 80%;
+    }
+    .input-search-container input::placeholder {
+        font-size: small;
+    }
+    .input-search-container svg {
+        font-size: small;
+    }
+    .select-country-container select {
+        margin-right: 0px;
+        padding: 10px;
+
+    }
+    .select-country-container {
+        margin-right: 0px;
+        width: 45%;
+        margin-left: 4px;
+        padding: 5px;
+    }
+    .select-country-container i {
+        top: calc(50% - 6px);
+    }
+    .flags-container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 40px;
+        align-items: center;
+    }
+}
+
+
+/* TABLET */
+
+
+@media screen and (min-width:577px) and (max-width:968px) {
+    .input-container{
+        display: flex;
+        justify-content: space-between;
+        height: 5em;
+        align-items: center;
+    }
+    
+    .input-search-container {
+        padding: 12px;
+        width: 300px;
+    }
+    
+    .select-country-container select{
+        width: 100%;
+        padding:12px;
+    }
+    
+    .select-country-container select::-ms-expand {
+        display: none;
+    }
+    
+    .select-country-container {
+        width: auto;
+        padding: 5px;
+        margin-right: 50px;
+    }
+
+    
+    .flags-container{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        width: 90%;
+        margin: auto;
+        margin-top: 30px;
+        gap: 50px;
+    }
+}

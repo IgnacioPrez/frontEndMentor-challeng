@@ -9,8 +9,6 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-family: 'Nunito Sans', sans-serif;
-  background: var(--background-dark);
-
   --background-dark: hsl(207, 26%, 17%);
   --dark-mode-elements: hsl(209, 23%, 22%);
   --light-mode-text:hsl(200, 15%, 8%);

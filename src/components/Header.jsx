@@ -1,4 +1,5 @@
 import './header.css';
+import './headerQuery.css';
 import {BsMoon,BsMoonFill} from 'react-icons/bs'
 const Header = ({setMode,mode}) => {
   return (

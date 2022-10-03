@@ -1,0 +1,13 @@
+
+
+@media screen  and (min-width:320px) and (max-width:576px){
+    .father{
+        height: 100%;
+    }
+}
+@media (min-width:1000px)  {
+    .father{
+        height: 100vh;
+        max-height: 100%;
+    }
+}

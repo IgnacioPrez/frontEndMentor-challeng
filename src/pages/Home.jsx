@@ -1,8 +1,10 @@
 import { useEffect, useState } from "react";
+import { Link,Outlet } from "react-router-dom";
 import "./home.css";
+import './homeQuery.css';
 import { AiOutlineSearch } from "react-icons/ai";
 import { BaseURl } from "../api";
-import { Link,Outlet } from "react-router-dom";
+
 const Home = ({mode}) => {
   const [flags, setFlags] = useState([]);
   const [value, setValue] = useState("");
