@@ -13,7 +13,7 @@ const InfoCountry = ({mode}) => {
   }, []);
 
   const infoCountry = () => {
-    fetch(`${BaseURl}name/${country}`)
+    fetch(`${BaseURl}name/${country.toLocaleLowerCase()}`)
       .then((result) => result.json())
       .then((data) => setInfo(data))
       .catch((error) => console.error(error));
