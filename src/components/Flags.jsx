@@ -9,7 +9,7 @@ export const Flags = ({value,flags,mode}) => {
     useEffect(()=>{
       setTimeout(()=>{
         setLoading(false)
-      },3000)
+      },2000)
     },[])
 
 
@@ -29,13 +29,13 @@ export const Flags = ({value,flags,mode}) => {
           <section className="flags-container"> 
           {results.map((flag, index) => {
             return (
-              <Link className={'card '} >
+              <div className={'card '} >
                 <Skeleton variant='rectangular' width={280} height={150}/>
                 <p><Skeleton/></p>
                 <p><Skeleton/></p>
                 <p><Skeleton/></p>
                 <p><Skeleton/></p>
-              </Link>
+              </div>
             );
           })}
         </section>
