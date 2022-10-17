@@ -15,7 +15,6 @@ body {
   --light-mode-input:hsl(0, 0%, 52%);
   --light-mode-background: hsl(0, 0%, 98%);
   --dark-mode-text-light-mode-elements: hsl(0, 0%, 100%);
-
 }
 
 code {

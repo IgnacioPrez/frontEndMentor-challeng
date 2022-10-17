@@ -17,7 +17,6 @@ const Home = ({mode}) => {
       .then((result) => result.json())
       .then((data) => {
         setFlags(data);
-
       })
       .catch((error) => console.log(error));
   };

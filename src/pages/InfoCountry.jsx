@@ -13,7 +13,7 @@ const InfoCountry = ({mode}) => {
   }, []);
 
   const infoCountry = () => {
-    fetch(`${BaseURl}name/${country.toLocaleLowerCase()}`)
+    fetch(`${BaseURl}name/${country.toLocaleLowerCase()}?fullText=true`)
       .then((result) => result.json())
       .then((data) => setInfo(data))
       .catch((error) => console.error(error));
@@ -45,14 +45,18 @@ const InfoCountry = ({mode}) => {
                     <p><span>Lenguages:</span> {inf.languages[0].name}</p>
                   </div>
                 </div>
-                <div className="border-countries">
+                {inf.borders? <div className="border-countries">
                   <p><span>Border Countries:</span></p>
                   <div className='border-countries-country'>
                   <p>{inf.borders[0]}</p>
                   <p>{inf.borders[1]}</p>
                   <p>{inf.borders[2]}</p>
                   </div>
+                </div>:
+                <div className="border-countries">
+                <p><span>Border Countries: 0</span></p>
                 </div>
+                }
               </div>
             </div>
           );
