@@ -6,7 +6,7 @@ import { useState } from 'react';
 import NotFound from './pages/NotFound';
 import './app.css'
 const App = () => {
-  const [mode,setMode] = useState(false)
+  const [mode,setMode] = useState(window.localStorage.getItem('mode'))
   return (
     <div className='father'>
       <Header setMode={setMode} mode={mode}/>
