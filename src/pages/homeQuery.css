@@ -11,6 +11,7 @@
         margin-bottom: 30px;
         height: 150px;
     }
+
     .input-search-container {
         margin-left: 4px;
         gap: 4px;
@@ -57,7 +58,7 @@
         height: 5em;
         align-items: center;
     }
-    
+
     .input-search-container {
         padding: 12px;
         width: 300px;
@@ -82,9 +83,14 @@
     .flags-container{
         display: grid;
         grid-template-columns: repeat(2,1fr);
-        width: 90%;
+        width: 100%;
         margin: auto;
+        height: 100%;
         margin-top: 30px;
         gap: 50px;
     }
+}
+
+main {
+    height: 100%;
 }

@@ -13,7 +13,7 @@ export const Input = ({mode,value,selectRegion,setValue,setSelectRegion}) => {
       };
   return (
     <div className="input-container">
-        <div className={!mode? 'input-search-container dark-elements': 'input-search-container ligth-elemets ligth-input'}>
+        <div className={localStorage.getItem('mode') === 'true'? 'input-search-container dark-elements': 'input-search-container ligth-elemets ligth-input'}>
           <AiOutlineSearch />
           <input
             placeholder="Search for a country..."
@@ -21,7 +21,7 @@ export const Input = ({mode,value,selectRegion,setValue,setSelectRegion}) => {
             value={value}
           />
         </div>
-        <div className={!mode? 'select-country-container dark-elements ': 'select-country-container ligth-elemets ligth-input'}>
+        <div className={localStorage.getItem('mode') === 'true'? 'select-country-container dark-elements ': 'select-country-container ligth-elemets ligth-input'}>
           <select value={selectRegion} name="select" onChange={filterRegion}>
             <option value="">Filter by Region</option>
             <option value="africa">Africa</option>

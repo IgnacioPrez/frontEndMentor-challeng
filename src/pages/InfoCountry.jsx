@@ -19,8 +19,8 @@ const InfoCountry = ({mode}) => {
       .catch((error) => console.error(error));
   };
   return (
-    <div className={!mode ? 'country-container info-theme-dark ' : 'country-container info-theme-ligth'}>
-      <div className={!mode? 'link-back ': 'link-back link-back-ligth'}>
+    <div className={localStorage.getItem('mode') === 'true' ? 'country-container info-theme-dark ' : 'country-container info-theme-ligth'}>
+      <div className={localStorage.getItem('mode') === 'true'? 'link-back ': 'link-back link-back-ligth'}>
         <BsArrowLeft />
         <Link to={"/"}>Back</Link>
       </div>
@@ -29,7 +29,7 @@ const InfoCountry = ({mode}) => {
           return (
             <div key={index} className="card-info-country">
               <img src={inf.flag} alt={inf.name} />
-              <div className={!mode? 'info-container': ' info-container info-theme-ligth-elements'}>
+              <div className={localStorage.getItem('mode') === 'true'? 'info-container': ' info-container info-theme-ligth-elements'}>
                 <h3>{inf.name}</h3>
                 <div className="info-container-one">
                   <div>

@@ -16,11 +16,11 @@ const Header = ({setMode,mode}) => {
   }
   
   return (
-    <header className={!mode ? 'header theme-dark ' : 'header theme-ligth'} >
+    <header className={localStorage.getItem('mode') === 'true' ? 'header theme-dark ' : 'header theme-ligth'} >
         <h1>¿Where in the world?</h1>
-        <div className='container-mode' onClick={setLocalStorage} >
+        <div className='container-mode' onClick={() => setLocalStorage(mode)} >
             {!mode? <BsMoonFill/>: <BsMoon /> }
-            <h6>Dark Mode</h6>
+            <p>Dark Mode</p>
         </div>
     </header>
   )
