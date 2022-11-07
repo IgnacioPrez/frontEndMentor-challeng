@@ -30,7 +30,6 @@ export const Input = ({mode,value,selectRegion,setValue,setSelectRegion}) => {
             <option value="europe">Europe</option>
             <option value="oceania">Oceania</option>
           </select>
-          <i></i>
         </div>
       </div>
   )

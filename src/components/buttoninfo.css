@@ -1,0 +1,17 @@
+.btn-modal-container {
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+}
+.btn-modal-container button {
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    background: #3b83ef;;
+    color: var( --dark-mode-text-light-mode-elements);
+    cursor: pointer;
+}
+
+.btn-modal-container button:hover {
+    background:  var( --light-mode-text);
+}

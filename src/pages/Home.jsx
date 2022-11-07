@@ -7,7 +7,7 @@ import { Input } from "../components/Input";
 import { Flags } from "../components/Flags";
 import Modal from "../components/Modal";
 import modalImage from '../assets/img/undraw_around_the_world_re_rb1p.svg'
-
+import ButtonInfo from "../components/ButtonInfo";
 const Home = ({mode}) => {
   const [flags, setFlags] = useState([]);
   const [value, setValue] = useState("");
@@ -23,9 +23,9 @@ const Home = ({mode}) => {
       })
       .catch((error) => console.log(error));
   };
+
   useEffect(() => {
     getRegion()
-
   }, [selectRegion, value]);
 
 
@@ -38,6 +38,7 @@ const Home = ({mode}) => {
         </div>
       </Modal>
       <Input mode={mode} value={value} selectRegion={selectRegion} setValue={setValue} setSelectRegion={setSelectRegion}/>
+        <ButtonInfo state={state} setState={setState}/>
       <Flags flags={flags} value={value} mode={mode} />
       <Outlet/>
     </main>

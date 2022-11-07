@@ -47,7 +47,6 @@
     appearance: none;
 	-webkit-appearance: none;
 	-moz-appearance: none;
-    position: relative;
     padding:12px;
 
 }
@@ -57,21 +56,8 @@
 }
 
 .select-country-container {
-    position: relative;
     margin-right: 50px;
 
-}
-.select-country-container i {
-    position: absolute;
-	right: 13px;
-	top: calc(50% - 5px);
-	width: 7px;
-	height: 7px;
-	display: block;
-	border-left:1.5px solid #fff;
-	border-bottom:1.5px solid #fff;
-	transform: rotate(-45deg); /* Giramos el cuadrado */
-	transition: all 0.25s ease;
 }
 
 .flags-container{
