@@ -4,10 +4,9 @@ import './modalQuery.css'
 const Modal = ({children,state,setState}) => {
     const modalStorage = () => {
         setState(!state)
-        localStorage.setItem('modal',JSON.stringify(state))
     }
   return (
-    <>  {localStorage.getItem('modal') === 'true'?
+    <>  {state&&
         <div className='overlay'>
             <div className='container-modal'>
                 <div className='container-modal-header'>
@@ -18,7 +17,7 @@ const Modal = ({children,state,setState}) => {
                 </button>
                 {children}
             </div>
-        </div>: null }
+        </div>}
     </>
   )
 }
